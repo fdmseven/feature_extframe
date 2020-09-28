@@ -1,0 +1,24 @@
+#coding=utf-8
+import io
+import traceback
+import json
+import math
+import pandas
+import configparser
+import logging
+from logging import handlers
+import os
+import sys
+
+from fdm_utils.common import get_tb_info
+from fdm_utils.common import debug_line
+
+##<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+## 变量部分
+## model_app_type_dict        ##记录app类型的字典，从model目录中解析
+##<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+CURRENT_DIR     = os.path.abspath(os.path.dirname(__file__))
+ROOT_DIR        = os.path.join(CURRENT_DIR, '../../')
+MODEL_DIR       = os.path.join(ROOT_DIR, './model')
+sys.path.insert(0,MODEL_DIR)
+from  app_type import model_app_type_dict
