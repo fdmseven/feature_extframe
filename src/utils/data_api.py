@@ -32,7 +32,7 @@ def get_basic_data(_key="user_id",_value=None,_end_time=None):
     dst  = None         ##程序正常时返回结果，否则返回None；
 
     try:
-        path_basic  = os.path.join(ROOT_DIR,"data/origin_data/basic.csv") 
+        path_basic  = os.path.join(ROOT_DIR,"data/basic.csv") 
         data_df     = pandas.read_csv(path_basic)
         dst         = data_df[data_df[_key] == _value]
         logger.info("%s=%s,get_basic_data完成" % (_key,_value))
@@ -50,7 +50,7 @@ def get_app_data(_key="user_id",_value=None,_end_time=None):
     dst  = None         ##程序正常时返回结果，否则返回None；
     
     try:
-        path_app = os.path.join(ROOT_DIR,"data/origin_data/app.csv") 
+        path_app = os.path.join(ROOT_DIR,"data/app.csv") 
         data_df  = pandas.read_csv(path_app)
         dst      = data_df[data_df[_key] == _value]
         logger.info("%s=%s,get_app_data完成" % (_key,_value))
@@ -68,7 +68,7 @@ def get_sms_data(_key="user_id",_value=None,_end_time=None):
     dst  = None         ##程序正常时返回结果，否则返回None；
 
     try:
-        path_sms = os.path.join(ROOT_DIR,"data/origin_data/sms.csv") 
+        path_sms = os.path.join(ROOT_DIR,"data/sms.csv") 
         data_df  = pandas.read_csv(path_sms)
         dst      = data_df[data_df[_key] == _value]
         logger.info("%s=%s,get_sms_data完成" % (_key,_value))
@@ -89,7 +89,7 @@ def get_credit_time(_key="user_id",_value=None):
         print("enter get_credit_time::")
         print("读取本地文件的尚未完成","unfix")
     try:
-        dst  = con.con_mysql("nanopay", "select credit_time from np_account_base where id = (%s)" % _value)
+        dst  = con.con_mysql("dbaaa", "select credit_time from tableaaa where id = (%s)" % _value)
         dst  = int(dst.iloc[0]["credit_time"])
         logger.info("%s=%s,get_credit_time完成" % (_key,_value))
     except:
