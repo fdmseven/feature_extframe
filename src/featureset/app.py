@@ -14,7 +14,7 @@ from featureset.models   import CFeature
 from utils.local_config  import feaconf
 from utils.local_config  import logger
 from utils.time_api      import time2datt
-from utils.get_model_var import model_app_type_dict
+from utils.get_tag       import tag_app_type_dict
 
 from fdm_utils.common             import get_tb_info
 from fdm_utils.common             import debug_line
@@ -102,7 +102,7 @@ class CAppFeature(CFeature):
         """
         if True:
             print("enter app_isbank_rate::")
-            print("model_app_type_dict::",len(model_app_type_dict))
+            print("tag_app_type_dict::",len(tag_app_type_dict))
             debug_line()
         """
 
@@ -110,7 +110,7 @@ class CAppFeature(CFeature):
         isbank_cnt  = 0
         for i in range(total_cnt):
             appname      = self.m_origin_data.iloc[i]["appname"]
-            apptype      = model_app_type_dict.get(appname,"")
+            apptype      = tag_app_type_dict.get(appname,"")
             ##if True:
             ##    print("\t","i==",i,appname,apptype)
             if apptype == "bank":
@@ -122,7 +122,7 @@ class CAppFeature(CFeature):
         isloan_cnt  = 0
         for i in range(total_cnt):
             appname      = self.m_origin_data.iloc[i]["appname"]
-            apptype      = model_app_type_dict.get(appname,"")
+            apptype      = tag_app_type_dict.get(appname,"")
             if apptype == "loan":
                 isloan_cnt += 1
         return isloan_cnt*1.0/total_cnt
@@ -132,7 +132,7 @@ class CAppFeature(CFeature):
         isjingpin_cnt   = 0
         for i in range(total_cnt):
             appname      = self.m_origin_data.iloc[i]["appname"]
-            apptype      = model_app_type_dict.get(appname,"")
+            apptype      = tag_app_type_dict.get(appname,"")
             if apptype == "jingpin":
                 isjingpin_cnt += 1
         return isjingpin_cnt*1.0/total_cnt
@@ -144,7 +144,7 @@ class CAppFeature(CFeature):
         for i in range(total_cnt):
             appname         = self.m_origin_data.iloc[i]["appname"]
             install_timestr = self.m_origin_data.iloc[i]["installtime_utc"]
-            apptype         = model_app_type_dict.get(appname,"")
+            apptype         = tag_app_type_dict.get(appname,"")
             if apptype == "loan":
                 isloan_cnt += 1
                 install_dt = time.strptime(install_timestr, "%Y-%m-%d %H:%M:%S")
@@ -163,7 +163,7 @@ class CAppFeature(CFeature):
         for i in range(total_cnt):
             appname         = self.m_origin_data.iloc[i]["appname"]
             install_timestr = self.m_origin_data.iloc[i]["installtime_utc"]
-            apptype         = model_app_type_dict.get(appname,"")
+            apptype         = tag_app_type_dict.get(appname,"")
             if apptype == "loan":
                 isloan_cnt += 1
                 install_dt = time.strptime(install_timestr, "%Y-%m-%d %H:%M:%S")

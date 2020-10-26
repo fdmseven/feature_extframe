@@ -19,6 +19,6 @@ from fdm_utils.common import debug_line
 ##<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 CURRENT_DIR     = os.path.abspath(os.path.dirname(__file__))
 ROOT_DIR        = os.path.join(CURRENT_DIR, '../../')
-MODEL_DIR       = os.path.join(ROOT_DIR, './model')
-sys.path.insert(0,MODEL_DIR)
-from  app_type import model_app_type_dict
+TAG_DIR         = os.path.join(ROOT_DIR, './tag')
+sys.path.insert(0,TAG_DIR)
+from  app_type import tag_app_type_dict
