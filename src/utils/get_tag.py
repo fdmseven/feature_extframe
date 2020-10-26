@@ -15,7 +15,7 @@ from fdm_utils.common import debug_line
 
 ##<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 ## 变量部分
-## model_app_type_dict        ##记录app类型的字典，从model目录中解析
+## tag_app_type_dict        ##记录app类型的字典，从tag目录中解析
 ##<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 CURRENT_DIR     = os.path.abspath(os.path.dirname(__file__))
 ROOT_DIR        = os.path.join(CURRENT_DIR, '../../')
