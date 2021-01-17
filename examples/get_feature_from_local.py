@@ -11,8 +11,8 @@ from utils.local_config     import logger                       ## 打印日志�
 from utils.local_config     import feaconf                      ## 特征配置的全局变量，从feature.conf中解析
 from utils.data_api         import get_credit_time              ## 获取授信时间
 
-from fdm_utils.common       import get_tb_info                  ## 异常处理
-from fdm_utils.common       import debug_line                   ## 打印空行，屏幕输出间隔开，方便调试
+from fdmutils.common       import get_tb_info                  ## 异常处理
+from fdmutils.common       import debug_line                   ## 打印空行，屏幕输出间隔开，方便调试
 
 ##<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<,
 ## 参数设置（日志|特征）

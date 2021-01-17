@@ -10,8 +10,8 @@ from logging import handlers
 import os
 import sys
 
-from fdm_utils.common import get_tb_info
-from fdm_utils.common import debug_line
+from fdmutils.common import get_tb_info
+from fdmutils.common import debug_line
 
 ##<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 ## 变量部分

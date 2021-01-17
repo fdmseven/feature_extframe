@@ -13,9 +13,9 @@ from featureset.sms      import CSmsFeature                 ## 短信数据的�
 from utils.local_config  import logger                      ## 打印日志的全局变量，从log.conf中解析
 from utils.local_config  import feaconf                     ## 特征配置的全局变量，从feature.conf中解析
 
-from fdm_utils.common                 import get_tb_info                 ## 异常处理
-from fdm_utils.common                 import show_dict_intree            ## 特征可视化 => 【以树的形式，可视化一个字典】
-from fdm_utils.common                 import debug_line                  ## 打印空行，屏幕输出间隔开，方便调试
+from fdmutils.common                 import get_tb_info                 ## 异常处理
+from fdmutils.common                 import show_dict_intree            ## 特征可视化 => 【以树的形式，可视化一个字典】
+from fdmutils.common                 import debug_line                  ## 打印空行，屏幕输出间隔开，方便调试
 
 
 class CFeatureExtractObj():

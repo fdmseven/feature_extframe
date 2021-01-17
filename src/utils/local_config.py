@@ -11,10 +11,10 @@ import os
 import sys
 
 
-from fdm_utils.common import get_tb_info
-from fdm_utils.common import debug_line
-from fdm_utils.config import init_log_from_config
-from fdm_utils.config import read_config
+from fdmutils.common import get_tb_info
+from fdmutils.common import debug_line
+from fdmutils.config import init_log_from_config
+from fdmutils.config import read_config
 
 ##<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 ## 变量部分

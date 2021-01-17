@@ -14,8 +14,8 @@ from featureset.models  import CFeature
 from utils.local_config import feaconf
 from utils.local_config import logger
 
-from fdm_utils.common       import get_tb_info
-from fdm_utils.common       import debug_line
+from fdmutils.common       import get_tb_info
+from fdmutils.common       import debug_line
 
 class CBasicFeature(CFeature):
     def __init__(self,_origin_data=None,_key=None,_value=None,_end_time=None):

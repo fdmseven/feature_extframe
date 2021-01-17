@@ -7,7 +7,7 @@ import time
 from utils.local_config import logger
 from utils.local_config import feaconf
 
-from fdm_utils.common             import get_tb_info
+from fdmutils.common             import get_tb_info
 
 class CFeature(object):
 

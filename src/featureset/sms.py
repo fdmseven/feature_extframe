@@ -15,9 +15,9 @@ from utils.local_config import feaconf
 from utils.local_config import logger
 from utils.time_api     import time2datt
 
-from fdm_utils.common             import get_tb_info
-from fdm_utils.common             import debug_line
-from fdm_utils.common             import is_number
+from fdmutils.common             import get_tb_info
+from fdmutils.common             import debug_line
+from fdmutils.common             import is_number
 
 class CSmsFeature(CFeature):
     def __init__(self,_origin_data=None,_key=None,_value=None,_end_time=None):

@@ -16,8 +16,8 @@ from utils.local_config  import logger
 from utils.time_api      import time2datt
 from utils.get_tag       import tag_app_type_dict
 
-from fdm_utils.common             import get_tb_info
-from fdm_utils.common             import debug_line
+from fdmutils.common             import get_tb_info
+from fdmutils.common             import debug_line
 
 class CAppFeature(CFeature):
     def __init__(self,_origin_data=None,_key=None,_value=None,_end_time=None):

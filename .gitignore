@@ -1,0 +1,4 @@
+*__pycache__
+log/debug.log
+log/error.log
+log/info.log
